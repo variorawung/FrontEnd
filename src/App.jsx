@@ -32,14 +32,14 @@ function App() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500 font-bold text-lg text-white shadow-lg shadow-blue-500/30">
-              N
+              VR
             </div>
             <span className="text-xl font-bold tracking-tight">{title}</span>
           </div>
 
           <nav className="hidden items-center gap-8 md:flex">
             {navItems.map((item) => (
-              <a key={item} href="#" className="text-sm text-slate-300 transition hover:text-white">
+              <a onClick={() => {setTitle(item);}} key={item} href="#" className="text-sm text-slate-300 transition hover:text-white">
                 {item}
               </a>
             ))}
