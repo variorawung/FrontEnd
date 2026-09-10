@@ -1,5 +1,12 @@
+import greetings from './component/props/greetings'
+import {useState} from 'react'
+
+
 function App() {
+  const [activeNav, setActiveNav] = useState('Home')
   const navItems = ['Home', 'Features', 'Pricing', 'Contact']
+
+  const [title, setTitle] = useState('Vario Studio')
 
   const features = [
     {
@@ -27,7 +34,7 @@ function App() {
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500 font-bold text-lg text-white shadow-lg shadow-blue-500/30">
               N
             </div>
-            <span className="text-xl font-bold tracking-tight">Vario Studio</span>
+            <span className="text-xl font-bold tracking-tight">{title}</span>
           </div>
 
           <nav className="hidden items-center gap-8 md:flex">
